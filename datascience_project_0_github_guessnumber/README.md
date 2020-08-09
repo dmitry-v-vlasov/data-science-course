@@ -6,7 +6,7 @@ A guess number game example with a primitive self-testing
 
 * Python 3.7+
 * numpy
-* setuptools, wheel, twine
+* setuptools, wheel
 
 ## Installation
 
@@ -30,7 +30,7 @@ datascience_guessnumber -h
 
 Here is a copy of the help text of the `datascience_guessnumber` command.
 
-```bash
+```
 usage: datascience_guessnumber [-h] [-n INTEGER] [-s "[a, b]"] [-g LIST] [-v] [-vv] [--version]
 
   __ _ _   _  ___  ___ ___   _ __  _   _ _ __ ___ | |__   ___ _ __ 

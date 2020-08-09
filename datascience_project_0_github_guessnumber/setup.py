@@ -17,14 +17,14 @@ if __name__ == "__main__":
         author="Dmitry Vlasov",
         author_email="dmitry.v.vlasov@gmail.com",
         license="MIT",
-        url="https://github.com/dmitry-v-vlasov/data-science-course",
+        url="https://github.com/dmitry-v-vlasov/data-science-course/tree/master/datascience_project_0_github_guessnumber",
         keywords=["datascience", "essentials", "guessnumber"],
         classifiers=[
             "Programming Language :: Python :: 3",
             "License :: OSI Approved :: MIT License",
             "Operating System :: OS Independent"
         ],
-        install_requires=["setuptools", "wheel", "twine", "numpy"],
+        install_requires=["setuptools", "wheel", "numpy"],
         packages=setuptools.find_packages(),
         entry_points={
             "console_scripts": ["datascience_guessnumber=datascience_project_0_github_guessnumber.command_line:run"]
