@@ -10,9 +10,9 @@ A guess number game example with primitive self-testing
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install `datascience_project_0_github_guessnumber`.
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install `datascience-project-0-github-guessnumber`.
 
-### Installation of the package `datascience_project_0_github_guessnumber`
+### Installation of the package `datascience-project-0-github-guessnumber`
 
 ```bash
 pip install datascience-project-0-github-guessnumber
