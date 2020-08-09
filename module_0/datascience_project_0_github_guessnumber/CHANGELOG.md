@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 0.1.2
+
+- Dummy release: README.md fix
+
 ## Version 0.1.1
 
 - Пакет [datascience_project_0_github_guessnumber](../datascience_project_0_github_guessnumber)

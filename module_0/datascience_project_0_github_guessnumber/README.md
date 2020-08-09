@@ -25,6 +25,7 @@ https://pypi.org/project/datascience-project-0-github-guessnumber/
 ```bash
 git clone https://github.com/dmitry-v-vlasov/data-science-course.git
 cd data-science-course
+cd module_0
 cd datascience_project_0_github_guessnumber
 pip install .
 ```
