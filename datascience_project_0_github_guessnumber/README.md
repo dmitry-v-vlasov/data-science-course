@@ -9,6 +9,7 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
 ### Installation from a local copy of the repository.
 ```bash
 git clone https://github.com/dmitry-v-vlasov/data-science-course.git
+cd data-science-course
 cd datascience_project_0_github_guessnumber
 pip install .
 ```
