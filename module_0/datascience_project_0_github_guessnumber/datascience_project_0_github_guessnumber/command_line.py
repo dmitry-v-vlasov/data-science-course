@@ -161,7 +161,11 @@ mean iterations - {efficiency["mean-iterations"]}...""")
         _logger.info(f"Testing the strategy {game_core_type}... Done.")
 
     minimal_count_strategy: GameCoreType = min(strategy_efficiencies.items(), key=lambda it: it[1]["mean-count"])[0]
-    print(f"Вывод: наиболее эффективная стратегия по количеству _единичных_ угадываний: {minimal_count_strategy.value}")
+    minimal_iterations_strategy: GameCoreType = min(strategy_efficiencies.items(), key=lambda it: it[1]["mean-iterations"])[0]
+
+    print(f"""Вывод:
+\t- наиболее эффективная стратегия по количеству _единичных_ угадываний: {minimal_count_strategy.value};
+\t- стратегия с минимальным количеством _итераций_ основного цикла: {minimal_iterations_strategy.value}.""")
 
     _logger.info("END - Guess Number Game Strategies Demonstration")
 
