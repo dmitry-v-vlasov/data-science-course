@@ -135,7 +135,9 @@ def score_game(game_core_type: GameCoreType,
     mean_count = int(np.mean([efficiency_parameters[0] for efficiency_parameters in efficiency_measuments]))
     mean_iterations = int(np.mean([efficiency_parameters[1] for efficiency_parameters in efficiency_measuments]))
 
-    print(f"Ваш алгоритм \"{game_core_type.value}\" угадывает число в среднем за {mean_count} попыток при {mean_iterations} итерациях цикла.")
+    print(
+        f"Ваш алгоритм \"{game_core_type.value}\" угадывает число в среднем за {mean_count} попыток "
+        + f"с {mean_iterations} итерациями основного цикла в среднем.")
 
     return {
         "mean-count": mean_count,
