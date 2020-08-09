@@ -1,0 +1,26 @@
+[project]
+name = "datascience_project_0_github_guessnumber"
+version = "0.1.0"
+description = "Data science project 0: A guess number game example with a primitive self-testing"
+authors = [
+    "Dmitry Vlasov <dmitry.v.vlasov@gmail.com>"
+]
+license = "MIT"
+readme = "README.md"
+python = "^3.6"
+homepage = "https://github.com/dmitry-v-vlasov/data-science-course"
+repository = "https://github.com/dmitry-v-vlasov/data-science-course"
+documentation = "https://github.com/dmitry-v-vlasov/data-science-course"
+keywords = ["datascience", "essentials", "guessnumber"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+[project.scripts]
+datascience_guessnumber = "datascience_project_0_github_guessnumber.command_line:run"
+
+[build-system]
+requires = ["setuptools", "wheel", "twine", "numpy"]
+build-backend = "setuptools.build_meta"
