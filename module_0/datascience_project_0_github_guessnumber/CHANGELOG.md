@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 0.1.1
+
+- Пакет [datascience_project_0_github_guessnumber](../datascience_project_0_github_guessnumber)
+  перемещён в директорию [module_0](../../module_0) для сдачи задания.
+
 ## Version 0.1.0
 
 - Вручную, с помощью IDE PyCharm,
