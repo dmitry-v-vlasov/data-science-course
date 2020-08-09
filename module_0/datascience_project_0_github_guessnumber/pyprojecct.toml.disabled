@@ -8,9 +8,9 @@ authors = [
 license = "MIT"
 readme = "README.md"
 python = "^3.7"
-homepage = "https://github.com/dmitry-v-vlasov/data-science-course"
+homepage = "https://github.com/dmitry-v-vlasov/data-science-course/tree/master/module_0/datascience_project_0_github_guessnumber"
 repository = "https://github.com/dmitry-v-vlasov/data-science-course"
-documentation = "https://github.com/dmitry-v-vlasov/data-science-course"
+documentation = "https://github.com/dmitry-v-vlasov/data-science-course/tree/master/module_0/datascience_project_0_github_guessnumber"
 keywords = ["datascience", "essentials", "guessnumber"]
 classifiers = [
     "Programming Language :: Python :: 3",

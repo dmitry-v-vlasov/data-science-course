@@ -2,5 +2,5 @@
 
 ## List of Projects
 
-1. [datascience_project_0_github_guessnumber](datascience_project_0_github_guessnumber)
+1. [Module 0 - Guess Number](module_0)
 

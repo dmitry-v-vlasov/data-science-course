@@ -17,7 +17,7 @@ if __name__ == "__main__":
         author="Dmitry Vlasov",
         author_email="dmitry.v.vlasov@gmail.com",
         license="MIT",
-        url="https://github.com/dmitry-v-vlasov/data-science-course/tree/master/datascience_project_0_github_guessnumber",
+        url="https://github.com/dmitry-v-vlasov/data-science-course/tree/master/module_0/datascience_project_0_github_guessnumber",
         keywords=["datascience", "essentials", "guessnumber"],
         classifiers=[
             "Programming Language :: Python :: 3",
