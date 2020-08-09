@@ -4,13 +4,13 @@ A guess number game example with a primitive self-testing
 
 ## Requrements
 
-* Python 3.6+
+* Python 3.7+
 * numpy
 * setuptools, wheel, twine
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install `datascience_project_0_github_guessnumber`.
 
 ### Installation from a local copy of the repository.
 ```bash

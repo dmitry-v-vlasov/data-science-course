@@ -7,7 +7,7 @@ authors = [
 ]
 license = "MIT"
 readme = "README.md"
-python = "^3.6"
+python = "^3.7"
 homepage = "https://github.com/dmitry-v-vlasov/data-science-course"
 repository = "https://github.com/dmitry-v-vlasov/data-science-course"
 documentation = "https://github.com/dmitry-v-vlasov/data-science-course"
