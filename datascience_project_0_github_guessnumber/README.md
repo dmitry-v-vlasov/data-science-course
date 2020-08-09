@@ -1,4 +1,4 @@
-# Data science project 0: A guess number game example with a primitive self-testing
+# Data science project 0: A guess number game example with primitive self-testing
 
 A guess number game example with primitive self-testing
 
