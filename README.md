@@ -1,4 +1,4 @@
-# data-science-course
+# Data Science Course - Portfolio
 
 ## List of Projects
 
