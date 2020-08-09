@@ -12,7 +12,16 @@ A guess number game example with primitive self-testing
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install `datascience_project_0_github_guessnumber`.
 
-### Installation from a local copy of the repository.
+### Installation of the package `datascience_project_0_github_guessnumber`
+
+```bash
+pip install datascience-project-0-github-guessnumber
+```
+
+View at:
+https://pypi.org/project/datascience-project-0-github-guessnumber/
+
+### Installation from a local copy of the repository
 ```bash
 git clone https://github.com/dmitry-v-vlasov/data-science-course.git
 cd data-science-course
