@@ -1,6 +1,12 @@
 # Data science project 0: A guess number game example with a primitive self-testing
 
-Foobar is a Python library for dealing with word pluralization.
+A guess number game example with a primitive self-testing
+
+## Requrements
+
+* Python 3.6+
+* numpy
+* setuptools, wheel, twine
 
 ## Installation
 
