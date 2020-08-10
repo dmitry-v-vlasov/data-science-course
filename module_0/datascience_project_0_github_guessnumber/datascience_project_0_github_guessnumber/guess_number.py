@@ -1,7 +1,11 @@
+import logging
 import numpy as np
 
 from enum import Enum
 from typing import Tuple, Dict
+
+
+_logger = logging.getLogger(__name__)
 
 
 class GameCoreType(str, Enum):
@@ -119,25 +123,36 @@ def score_game(game_core_type: GameCoreType,
     """Run the game a specified number of times to see how quickly the game guesses a number.
 
     Parameters:
-        game_core (function): a function which does number guesses
+        game_core_type (GameCoreType): a game core type
         attempts (int): the number of attempts a game algorithm has to demonstrate its efficiency
         segment (Tuple): the segment the given number belongs to (number ∈ segment)
+
+    Returns:
+        a dictionary with the structure {"mean-count": N1, "mean-iterations": N2} where {N1, N2} ∈ ℕ.
     """
     efficiency_measuments = list()
     np.random.seed(1)  # We make the RANDOM SEED fixed, in order to make our experiment reproducible!
     random_array = np.random.randint(segment[0], segment[1] + 1, size=attempts)
     game_core = get_game_core(game_core_type)
 
-    for number in random_array:
+    for number in random_array:  # The main loop to test the given game core
         efficiency_parameters = game_core(number, segment)
         efficiency_measuments.append(efficiency_parameters)
 
-    mean_count = int(np.mean([efficiency_parameters[0] for efficiency_parameters in efficiency_measuments]))
-    mean_iterations = int(np.mean([efficiency_parameters[1] for efficiency_parameters in efficiency_measuments]))
+    # All counts for all guessed numbers
+    counts = [efficiency_parameters[0] for efficiency_parameters in efficiency_measuments]
+    _logger.debug(f"""Counts for {game_core_type}:\n{counts}""")
 
-    print(
-        f"Ваш алгоритм \"{game_core_type.value}\" угадывает число в среднем за {mean_count} попыток "
-        + f"с {mean_iterations} итерациями основного цикла в среднем.")
+    # All loop iterations for all guessed numbers
+    iterations = [efficiency_parameters[1] for efficiency_parameters in efficiency_measuments]
+    _logger.debug(f"""Iterations for {game_core_type}:\n{iterations}""")
+
+    mean_count = round(np.mean(counts), 1)
+    mean_iterations = round(np.mean(iterations), 1)
+
+    print(f"- Ваш алгоритм \"{game_core_type.value}\" угадывает число в среднем за\n"
+          + f"\t{mean_count} попыток ({int(mean_count)} целых) "
+          + f"с {mean_iterations} ({int(mean_iterations)} целых) итерациями основного цикла в среднем.")
 
     return {
         "mean-count": mean_count,

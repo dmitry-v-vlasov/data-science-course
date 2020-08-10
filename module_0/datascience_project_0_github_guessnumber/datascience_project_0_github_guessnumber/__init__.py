@@ -17,7 +17,7 @@ try:
     __copyright__ = f"\u00a9 Copyright {__year__}, {__author__}"
     __license__ = package_info["License"]
     __version__ = distribution.version
-except DistributionNotFound:
+except (DistributionNotFound, FileNotFoundError) as e:
     __author__ = "Dmitry Vlasov"
     __maintainer__ = "Dmitry Vlasov"
     __credits__ = [__author__]
@@ -25,6 +25,6 @@ except DistributionNotFound:
     __year__ = "2020"
     __copyright__ = f"\u00a9 Copyright {__year__}, {__author__}"
     __license__ = "MIT"
-    __version__ = 'unknown'
+    __version__ = '0.1.5'
 finally:
     del get_distribution, DistributionNotFound

@@ -17,12 +17,6 @@ BANNER = """  __ _ _   _  ___  ___ ___   _ __  _   _ _ __ ___ | |__   ___ _ __
  \__, |\__,_|\___||___/___/ |_| |_|\__,_|_| |_| |_|_.__/ \___|_|   
  |___/"""
 
-
-# __author__ = "Dmitry Vlasov"
-# __copyright__ = "Dmitry Vlasov"
-# __license__ = "mit"
-
-
 _logger = logging.getLogger(__name__)
 
 
@@ -65,7 +59,7 @@ a comma-separated list without spaces of one of \"{",".join([g.value for g in Ga
 def parse_args(args):
     """Parse command line parameters
 
-    Args:
+    Parameters:
       args ([str]): command line parameters as list of strings
 
     Returns:
@@ -130,10 +124,10 @@ The supported strategy names: {",".join([g.value for g in GameCoreType])}""",
 
 
 def setup_logging(log_level):
-    """Установка логирования
+    """Logging setup
 
     Parameters:
-      log_level (int): минимальный уровень логирования сообщений
+      log_level (int): minimal level of logged messages
     """
     logformat = "[%(asctime)s] %(levelname)s:%(name)s:%(message)s"
     logging.basicConfig(level=log_level, stream=sys.stdout,
@@ -143,8 +137,16 @@ def setup_logging(log_level):
 def main(args):
     """Main entry point allowing external calls
 
-    Args:
-      args ([str]): command line parameter list
+    Parameters:
+      **kwargs : main function keyword arguments
+
+    The expected **kwargs:
+    - attempts, default value - 1000: Number of testing attempts for a given number guessing algorithm (strategy);
+    - segment, default value - (1, 100): A segment of integer numbers where random hidden numbers are searched;
+    - game_strategies, default value -
+                       [GameCoreType.OLD_RANDOM_SNAIL, GameCoreType.BINARY_SEARCH, GameCoreType.TERNARY_SEARCH]:
+      This is a list of game core types (strategies) which can contain values from the enumeration class GameCoreType;
+    - logging_level, default value - None: A logging level of the log messages, e.g. logging.INFO, logging.DEBUG.
     """
     args = parse_args(args)
     setup_logging(args.loglevel)
@@ -153,15 +155,22 @@ def main(args):
     strategy_efficiencies = dict()
     _logger.info(f"Selected game strategies to perform testing: {args.game_strategies}")
     for game_core_type in [GameCoreType.of(game_strategy) for game_strategy in args.game_strategies]:
-        _logger.info(f"Testing the strategy {game_core_type}...")
+        _logger.info(f"\n-----------\nTesting the strategy {game_core_type}...")
+
+        # Calling the score_game function in order to test the strategy named game_core_type.
         efficiency = score_game(game_core_type, args.attempts, args.segment)
         strategy_efficiencies[game_core_type] = efficiency
+
         _logger.info(f"""The strategy efficienty: mean count - {efficiency["mean-count"]},
 mean iterations - {efficiency["mean-iterations"]}...""")
-        _logger.info(f"Testing the strategy {game_core_type}... Done.")
+        _logger.info(f"\nTesting the strategy {game_core_type}... Done.\n-----------\n")
 
-    minimal_count_strategy: GameCoreType = min(strategy_efficiencies.items(), key=lambda it: it[1]["mean-count"])[0]
-    minimal_iterations_strategy: GameCoreType = min(strategy_efficiencies.items(), key=lambda it: it[1]["mean-iterations"])[0]
+    # Each item in the dictionary strategy_efficiencies has a form
+    # (GameCoreType, {"mean-count": N1, "mean-iterations": N2}) where {N1, N2} ∈ ℕ
+    minimal_count_strategy: GameCoreType = min(strategy_efficiencies.items(),
+                                               key=lambda it: it[1]["mean-count"])[0]
+    minimal_iterations_strategy: GameCoreType = min(strategy_efficiencies.items(),
+                                                    key=lambda it: it[1]["mean-iterations"])[0]
 
     print(f"""Вывод:
 \t- наиболее эффективная стратегия по количеству _единичных_ угадываний: {minimal_count_strategy.value};
