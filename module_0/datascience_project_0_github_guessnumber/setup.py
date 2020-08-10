@@ -9,7 +9,7 @@ if __name__ == "__main__":
 
     setuptools.setup(
         name="datascience_project_0_github_guessnumber",
-        version="0.1.5",
+        version="0.1.6",
         platforms='any',
         description="Data science project 0: A guess number game example with primitive self-testing",
         long_description=long_description,

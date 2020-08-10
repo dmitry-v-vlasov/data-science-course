@@ -45,6 +45,8 @@ def guess_number_game_core_random_snail(number: int, segment: Tuple):
             predicted_number += 1
         elif number < predicted_number:
             predicted_number -= 1
+    else:
+        count += 1  # Увеличиваем счётчик на 1 для последнего успешного сравнения
 
     return count, iterations
 
@@ -70,6 +72,8 @@ def guess_number_game_core_binary_search(number: int, segment: Tuple):
         elif number < predicted_number:
             upper = predicted_number - 1
         predicted_number = lower + (upper - lower) // 2
+    else:
+        count += 1  # Увеличиваем счётчик на 1 для последнего успешного сравнения
 
     return count, iterations
 
@@ -101,6 +105,8 @@ def guess_number_game_core_ternary_search(number: int, segment: Tuple):
 
         middle_1 = lower + (upper - lower) // 3
         middle_2 = upper - (upper - lower) // 3
+    else:
+        count += 1 if middle_1 == number else 2  # Увеличиваем значение счётчика для последнего успешного сравнения
 
     return count, iterations
 
