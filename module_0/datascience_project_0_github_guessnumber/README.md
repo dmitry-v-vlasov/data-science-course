@@ -69,6 +69,20 @@ Licence: MIT
 ### Screenshot:
 ![](docs/images/usage-datascience_guessnumber-help.png)
 
+## Package file `guess_number.py`: Guess Number Game Algorithm Implementations (Guessing Strategies) 
+
+Three number guessing strategies are implemented in here:
+* `guess_number_game_core_random_snail`, symbolic name - `"random_snail"`;
+  **This is the original algoritm implementation which is initially given in the problem statement (`game_core_v2`)**;
+* `guess_number_game_core_binary_search`, symbolic name - `"binary-search"`;
+  This is a number guessing algoritm implementation based on the binary search algorithm;
+* `guess_number_game_core_ternary_search`, symbolic name - `"ternary-search"`;
+  This is a number guessing algoritm implementation based on the ternary search algorithm.
+
+The function `score_game` does a test of a given number guessing strategy.
+The tested strategy efficiency results are printed in the end of the body of the function `score_game`.
+The available strategies are enlisted in the enumeration class `GameCoreType`.
+
 ## Usage
 
 ### Calling the command `datascience_guessnumber` without arguments
