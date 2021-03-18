@@ -55,7 +55,7 @@ defusedxml==0.6.0
 diff-match-patch @ file:///tmp/build/80754af9/diff-match-patch_1594828741838/work
 dill==0.3.3
 distributed @ file:///tmp/build/80754af9/distributed_1605066520644/work
-Django==3.1
+Django==3.1.6
 docutils==0.16
 entrypoints==0.3
 et-xmlfile==1.0.1
