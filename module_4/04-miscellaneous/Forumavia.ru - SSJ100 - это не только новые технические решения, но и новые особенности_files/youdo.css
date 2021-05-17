@@ -1,0 +1,33 @@
+		.adv-youdo {
+			width: 220px;
+			padding: 15px 10px;
+			border: #CCCCCC 1px solid;
+			font-family: arial, sans;
+			color: #000;
+			font-size:13px;
+			line-height:18px;
+		}
+
+		.adv-youdo__header {
+			height: 50px;
+			text-align: right;
+			color: #999;
+			line-height: 27px;
+		}
+
+		.adv-youdo__header img {
+				float: left;
+		}
+
+		.adv-youdo__item {
+			position: relative;
+			padding-left: 20px;
+			margin-bottom: 15px;
+		}
+		.adv-youdo__item:before{
+			content: "\2192";
+			position: absolute;
+			left: 0;
+		}
+
+
