@@ -374,9 +374,8 @@ INNER JOIN
         ON f.arrival_airport = port_to.airport_code
 WHERE
     departure_airport = 'AAQ'
-    AND (date_trunc('month', f.scheduled_departure) IN ('2017-01-01','2017-02-01', '2017-12-01'))
+    AND (date_trunc('month', f.scheduled_departure) IN ('2017-01-01','2017-02-01', '2016-12-01'))
     AND f.status NOT IN ('Cancelled')
 GROUP BY
     f.flight_id, ad."range", ad.seats, ad.seats_economy, ad.seats_business, port_from.latitude, port_from.longitude, port_to.latitude, port_to.longitude
 ORDER BY total_load asc, amount_all asc;
-
