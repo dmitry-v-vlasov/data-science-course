@@ -1,0 +1,3 @@
+aircraft_id,aircraft_code,aircraft_name,fuel_g_per_pass_km,fuel_kg_per_hour,fuel_tank_volume_L
+1,733,Boeing 737-300,25,2400,23830
+2,SU9,Sukhoi Superjet-100,23.46,1800,15805
