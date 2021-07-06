@@ -37,6 +37,8 @@
 Выходные данные модели находятся в директории [00-data/kaggle](00-data/kaggle),
 в файле [00-data/kaggle/submission.csv](00-data/kaggle/submission.csv).
 
+## Ссылка на Jupyter Notebook в Kaggle
+[https://www.kaggle.com/dmitryvvlasov/dmitry-vlasov-project-5-solution-credit-scoring/notebook](https://www.kaggle.com/dmitryvvlasov/dmitry-vlasov-project-5-solution-credit-scoring/notebook)
 ## Этапы работы над проектом
 - сделан первичный анализ переменных;
 - преобразованы переменные в понятное числовое представление, включая создание бинарных переменных, ординальных переменных, и dummy переменных для номинативных признаков;
