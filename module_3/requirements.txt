@@ -152,7 +152,7 @@ pep8==1.7.1
 pexpect==4.8.0
 pickleshare==0.7.5
 Pillow @ file:///tmp/build/80754af9/pillow_1603822255246/work
-pipenv==2020.6.2
+pipenv==2022.1.8
 pkginfo==1.5.0.1
 pluggy==0.13.1
 ply==3.11
