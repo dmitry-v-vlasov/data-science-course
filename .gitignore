@@ -1,3 +1,8 @@
+# Large data
+.large-data/
+.large-*.zip
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
